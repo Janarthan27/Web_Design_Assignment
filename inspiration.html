@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Inspirations</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/inspiration.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Janarthan</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Dream</a></li>
+          <li><a href="achievement.html">Path</a></li>
+          <li><a href="inspiration.html" class="active">Inspiration</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="fade-in">My <span class="highlight">Inspirations</span></h1>
+        <p class="subtitle fade-in delay-1">The content creators who light my path</p>
+      </div>
+    </section>
+
+    <section class="inspiration-gallery">
+      <div class="container">
+        <div class="inspiration-grid">
+          <div class="inspiration-card fade-in-up">
+            <div class="inspiration-image">
+              <img src="images/jimmy.jpg" alt="Content Creator Setup" loading="laz">
+            </div>
+            <div class="inspiration-content">
+              <h2>MrBeast (Jimmy Donaldson)</h2>
+              <h3>YouTube's Revolutionary Creator</h3>
+              <blockquote>
+                "The harder you work, the luckier you get."
+              </blockquote>
+              <p>Jimmy Donaldson's journey from making gaming videos in his bedroom to becoming YouTube's biggest creator is nothing short of extraordinary. Starting in 2012, he relentlessly experimented with content, often recording thousands of takes to perfect a single video. His dedication to quality and innovation has revolutionized content creation.</p>
+              <p>Key achievements include surpassing 100 million subscribers, launching successful business ventures like MrBeast Burger and Feastables, and pioneering a new genre of high-budget YouTube content. His philanthropic work, including Team Trees and Team Seas initiatives, shows how content creators can make a real-world impact.</p>
+              <p class="impact">What I've learned: The importance of reinvesting in content, maintaining incredibly high production standards, and using influence for positive change. His journey teaches that success comes from obsessive dedication to craft and constantly pushing creative boundaries.</p>
+            </div>
+          </div>
+
+          <div class="inspiration-card fade-in-up delay-1">
+            <div class="inspiration-image">
+              <img src="images/ali.jpg" alt="Creative Workspace" loading="lazy">
+            </div>
+            <div class="inspiration-content">
+              <h2>Ali Abdaal</h2>
+              <h3>The Educational Content Master</h3>
+              <blockquote>
+                "Create content you wish existed."
+              </blockquote>
+              <p>Ali's transformation from a Cambridge-educated doctor to a leading educational content creator showcases the power of consistent, value-driven content. His systematic approach to content creation, combining scientific research with practical advice, has built a community of over 3 million subscribers.</p>
+              <p>His success spans multiple platforms, from YouTube to podcasting and course creation. Ali's ability to break down complex topics into digestible content while maintaining authenticity has created a trusted brand in the educational space.</p>
+              <p class="impact">What I've learned: The importance of systems in content creation, the power of teaching while learning, and how to build a sustainable content business while delivering genuine value. His approach to productivity and continuous learning has deeply influenced my content strategy.</p>
+            </div>
+          </div>
+
+          <div class="inspiration-card fade-in-up delay-2">
+            <div class="inspiration-image">
+              <img src="images/isa.jpg" alt="Social Media Creation" loading="lazy">
+            </div>
+            <div class="inspiration-content">
+              <h2>Isa Isarb</h2>
+              <h3>Malaysia's Content Pioneer</h3>
+              <blockquote>
+                "Success in content creation starts with understanding your local audience while thinking globally."
+              </blockquote>
+              <p>Isa Isarb has revolutionized Malaysian content creation through his unique blend of local culture and universal appeal. Starting from humble beginnings, he built a massive following through consistent, relatable content that bridges cultural gaps.</p>
+              <p>His journey from creating simple vlogs to becoming a prominent figure in Malaysian digital media demonstrates the power of authenticity and cultural storytelling. Isa's success in both entertainment and branded content shows how creators can maintain their voice while working with major brands.</p>
+              <p class="impact">What I've learned: The importance of cultural authenticity in global content, how to balance entertainment with brand collaborations, and the power of staying true to your roots while expanding your reach. His success in the Malaysian market while maintaining international appeal is a blueprint for my own journey.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quotes">
+      <div class="container">
+        <h2 class="section-title fade-in-up">Words That Guide Me</h2>
+        <div class="quote-container">
+          <div class="quote-card fade-in-up">
+            <p>"Don't wait for the perfect moment. Create it."</p>
+            <cite>— MrBeast</cite>
+          </div>
+          <div class="quote-card fade-in-up delay-1">
+            <p>"Your content should solve problems and answer questions."</p>
+            <cite>— Ali Abdaal</cite>
+          </div>
+          <div class="quote-card fade-in-up delay-2">
+            <p>"Stay authentic to your culture while speaking to the world."</p>
+            <cite>— Isa Isarb</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content fade-in-up">
+          <h2>Ready to circle back to my dream?</h2>
+          <a href="index.html" class="btn btn-primary">Back to My Dream <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Soon to be the Greatest Content Creator Ever</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in, .fade-in-up');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      fadeElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>

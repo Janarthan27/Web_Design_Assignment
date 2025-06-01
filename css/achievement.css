@@ -1,0 +1,179 @@
+/* Styling for the achievement page */
+
+/* Roadmap section */
+.roadmap {
+  padding: 3rem 0;
+  background-color: white;
+}
+
+/* Timeline layout */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 2px;
+  background-color: #ccc; /* light grey line */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #666; /* dark grey marker */
+  border: 2px solid white;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.timeline-marker.current {
+  background-color: #0071e3; /* blue for current step */
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.2);
+  transform: scale(1.2);
+}
+
+.timeline-content {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-period {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: #3399ff;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+/* Checklist inside timeline items */
+.checklist {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.checklist li:hover {
+  transform: translateX(5px);
+}
+
+.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: green;
+  font-weight: bold;
+}
+
+/* Professional Journey Section */
+.professional-journey {
+  background-color: #f2f2f2;
+  padding: 3rem 0;
+}
+
+.journey-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.journey-block {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.journey-block h3 {
+  color: #0071e3;
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    margin-left: -1px;
+  }
+
+  .timeline-item {
+    padding-left: 0;
+    margin-bottom: 3rem;
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: 50%;
+    padding-left: 1rem;
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) {
+    padding-left: 50%;
+    padding-right: 1rem;
+  }
+
+  .timeline-marker {
+    left: 50%;
+    margin-left: -8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    left: 18px;
+  }
+
+  .timeline-marker {
+    left: 10px;
+  }
+
+  .journey-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

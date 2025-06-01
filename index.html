@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Career Dream</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <style>
+    .profile-photo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Janarthan</div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Dream</a></li>
+          <li><a href="achievement.html">Path</a></li>
+          <li><a href="inspiration.html">Inspiration</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="fade-in">Becoming a <span class="highlight">Digital Creator</span></h1>
+        <p class="subtitle fade-in delay-1">Crafting compelling stories that inspire, educate, and connect people worldwide</p>
+      </div>
+    </section>
+
+    <section class="dream-overview">
+      <div class="container">
+        <div class="content-wrapper">
+
+          <!-- Profile Image Inserted Here -->
+          <div class="profile-photo fade-in-up">
+            <img src="images/jana.jpg" alt="Photo of Janarthan" class="profile-img">
+          </div>
+
+          <div class="content-block fade-in-up">
+            <h2>The Vision</h2>
+            <p>Hi, I'm Janarthan, and my dream is to become a digital content creator. I've always been inspired by the power of storytelling and how social media can influence, educate, and connect people all around the world.</p>
+            <p>I am currently studying at University Malaysia Perlis, pursuing my Bachelor's Degree in New Media Communication.</p>
+            <p>Through video production, social media strategy, and personal branding, I hope to grow into a content creator who can inspire and entertain audiences while collaborating with global brands.</p>
+          </div>
+
+          <div class="content-block fade-in-up delay-1">
+            <h2>Why Content Creation?</h2>
+            <p>From my experience working with lifestyle and fashion brands, I've learned the importance of creativity, communication, and consistency in building a personal brand.</p>
+            <p>I aim to create content that is not only visually appealing but also authentic and meaningful, making a real impact on my audience's lives while building lasting connections with global brands.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills">
+      <div class="container">
+        <h2 class="section-title fade-in-up">Key Skills I'll Master</h2>
+        <div class="skills-grid">
+          <div class="skill-card fade-in-up">
+            <div class="skill-icon">🎥</div>
+            <h3>Video Production</h3>
+            <p>Creating engaging video content using professional tools like Adobe Premiere Pro and CapCut.</p>
+          </div>
+          <div class="skill-card fade-in-up delay-1">
+            <div class="skill-icon">📱</div>
+            <h3>Social Media Strategy</h3>
+            <p>Understanding platform algorithms, trends, and audience engagement techniques.</p>
+          </div>
+          <div class="skill-card fade-in-up delay-2">
+            <div class="skill-icon">🎯</div>
+            <h3>Personal Branding</h3>
+            <p>Building a distinctive brand identity that resonates with audiences and brands.</p>
+          </div>
+          <div class="skill-card fade-in-up delay-3">
+            <div class="skill-icon">📊</div>
+            <h3>Analytics & Growth</h3>
+            <p>Using data to optimize content and grow audience engagement effectively.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content fade-in-up">
+          <h2>Ready to explore how I'll make this happen?</h2>
+          <a href="achievement.html" class="btn btn-primary">See My Path <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Soon to be the Greatest Content Creator Ever</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in, .fade-in-up');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      fadeElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>

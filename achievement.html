@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Achievement Path</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/achievement.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Janarthan</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Dream</a></li>
+          <li><a href="achievement.html" class="active">Path</a></li>
+          <li><a href="inspiration.html">Inspiration</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="fade-in">The <span class="highlight">Journey</span> Ahead</h1>
+        <p class="subtitle fade-in delay-1">My roadmap to becoming a successful digital content creator</p>
+      </div>
+    </section>
+
+    <section class="roadmap">
+      <div class="container">
+        <h2 class="section-title fade-in-up">My Achievement Path</h2>
+        
+        <div class="timeline">
+          <div class="timeline-item fade-in-up">
+            <div class="timeline-marker current"></div>
+            <div class="timeline-content">
+              <h3>Foundation Building</h3>
+              <span class="timeline-period">Present</span>
+              <p>Building core skills and establishing my content creation foundation through education and practice.</p>
+              <ul class="checklist">
+                <li>Mastering CapCut, Adobe Illustrator, After Effects, Premiere Pro, and InDesign</li>
+                <li>Study social media marketing</li>
+                <li>Start consistent content posting</li>
+                <li>Building portfolio through university projects</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in-up delay-1">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Growth & Analytics</h3>
+              <span class="timeline-period">Next 6 Months</span>
+              <p>Focus on understanding analytics, improving content strategy, and building a strong online presence.</p>
+              <ul class="checklist">
+                <li>Study platform analytics</li>
+                <li>Build personal website</li>
+                <li>Network with other creators</li>
+                <li>Optimize content strategy</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in-up delay-2">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Brand Collaborations</h3>
+              <span class="timeline-period">1-2 Years</span>
+              <p>Establish partnerships with brands and expand content reach through strategic collaborations.</p>
+              <ul class="checklist">
+                <li>Secure brand partnerships</li>
+                <li>Develop sponsored content</li>
+                <li>Create digital products</li>
+                <li>Expand platform presence</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in-up delay-3">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Sustainable Growth</h3>
+              <span class="timeline-period">2+ Years</span>
+              <p>Focus on long-term sustainability and expanding influence in the digital content space.</p>
+              <ul class="checklist">
+                <li>Launch multiple revenue streams</li>
+                <li>Build content team</li>
+                <li>Create educational resources</li>
+                <li>Mentor new creators</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="professional-journey">
+      <div class="container">
+        <h2 class="section-title fade-in-up">The Professional Journey</h2>
+        <div class="journey-content fade-in-up">
+          <div class="journey-block">
+            <h3>Regular Practice</h3>
+            <p>Commit to creating content daily, experimenting with different formats, and refining my storytelling skills. Practice is key to mastering the technical aspects of content creation.</p>
+          </div>
+          
+          <div class="journey-block">
+            <h3>Portfolio Building</h3>
+            <p>Develop a diverse portfolio showcasing my best work across different platforms and content types. Document my growth and maintain a professional online presence.</p>
+          </div>
+          
+          <div class="journey-block">
+            <h3>Peer Collaboration</h3>
+            <p>Actively seek opportunities to collaborate with fellow creators, learn from their experiences, and build a supportive network in the content creation community.</p>
+          </div>
+          
+          <div class="journey-block">
+            <h3>Industry Awareness</h3>
+            <p>Stay updated with the latest trends, tools, and best practices in content creation. Attend workshops, webinars, and industry events to expand knowledge and network.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content fade-in-up">
+          <h2>Want to know who inspires this journey?</h2>
+          <a href="inspiration.html" class="btn btn-primary">Meet My Inspirations <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Soon to be the Greatest Content Creator Ever</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in, .fade-in-up');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      fadeElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
